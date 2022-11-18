@@ -11,12 +11,12 @@ class city {
 	string file_name = "..\\db\\cities.txt";
 public:
 	city();
-	void addCity();
-	void editCity();
-	void delCity();
-	void save();
-	//static void inToFileC();
-	void inToFileC();
-	set<string> getCity();
+	void addCity();  //Potnin Igor
+	void editCity();   //Potnin Igor
+	void delCity();  //Edlov Evgenii
+	void save();//Edlov Evgenii
+	
+	void inToFileC();   //Potnin Igor
+	set<string> getCity(); //Edlov Evgenii -- Musukov Ruslan
 	~city();
 };

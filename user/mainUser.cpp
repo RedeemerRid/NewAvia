@@ -9,10 +9,8 @@ void listUpDownFlighy(Flight& fly);
 //void booking();
 
 int main() {
-	
 	Ticket tik;
 	Flight fly;
-	
 	int n;
 	do
 	{
@@ -48,14 +46,11 @@ int main() {
 			break;
 		}
 	} while (n != 0);
-
-	system("cls");
-
+    system("cls");
 	return 0;
 }
 
 void listUpFlight(Flight& fly) {
-	
 	fly.listUpFlightF();
 }
 

@@ -5,7 +5,6 @@
 #include <vector>
 using namespace std;
 
-
 template <class T>
 void getValue(string prompt, T& value)
 {
@@ -15,16 +14,12 @@ void getValue(string prompt, T& value)
 	{
 		cin.clear();
 		cin.ignore(32767, '\n');
-		
 		cout << "Error... try again" << endl;
 		cout << prompt;
-		
 		cin >> value;
-
 	}
 	string endLine;
 	getline(cin, endLine);
-	
 }
 
 template <>
@@ -34,30 +29,21 @@ void getValue<string>(string prompt, string& value)
 	getline(cin, value);
 	if(value.empty())
 		getline(cin, value);
-	
-	
-		
 }
 
-
 Flight::Flight() {
-		
 	InToFlight();
-	
 }
 Flight::~Flight() {
 	//OutToFile();
 }
 
 void Flight::addFlight() {
-	
 	flight f;
-			
 	int x;
 	do {
 		getValue("do you want to add Flight? 1 - yes,  0 - no: ", x);
 		if (x == 1) {
-
 			bool flag = false;
 			do {
 				//flag = false;
@@ -83,7 +69,6 @@ void Flight::addFlight() {
 			getValue("enter Type of Airplane : ", f.typeAirplane);
 			getValue("enter Cost of Ticket : ", f.costTicket);
 			getValue("enter Count of Seats : ", f.countSeats);
-
 			allFlight[f.numFlight] = f;
 		}
 	} while (x);
@@ -94,22 +79,17 @@ void Flight::editFlight() {
 	if (!allFlight.empty()) {
 		Flight::print();
 		cout << endl;
-
 		flight f1;
 		string edit_flight, exit, button, tempTown;
-
 		getValue("if you changed your mind, if you don't want to change anything, enter yes, or -0-, press wont yo mind, \nif you go go go exit 'enter' : ", exit);
 		if (!exit.empty())
 			cout << "by by" << endl;
 		else {
 			cout << "choose number of Flight which edit and other : " << endl << endl;
-
 			bool flag = 0;
 			do {
 				getValue("enter number of Flight : ", button);
-
 				auto it = allFlight.find(button);
-
 				if ( it!=allFlight.end()) {
 					edit_flight = button;
 					flag = 1;
@@ -117,12 +97,10 @@ void Flight::editFlight() {
 				else
 					cout << "error try again button " << endl << endl;
 			} while (!flag);
-
 			getValue("if you do not edit flight - enter '0'-zero or enter, \n\nif you edit flight - enter new flight  : ", f1.numFlight);
 			if (f1.numFlight == "0" || (f1.numFlight).empty()) {
 				f1.numFlight = allFlight[edit_flight].numFlight;
 			}
-
 			getValue("if you do not edit pointSrc - enter '0' - or enter, \nif you edit pointSrc - enter new pointSrc  : ", tempTown);//--------------------------
 			if (tempTown == "0" || tempTown.empty()) {
 				f1.pointSrc = allFlight[edit_flight].pointSrc;
@@ -188,7 +166,6 @@ void Flight::editFlight() {
 			//allFlight.erase(allFlight.find(edit_flight));
 			allFlight.erase(edit_flight);
 			allFlight[f1.numFlight] = f1;
-
 			cout << endl;
 		}
 	}
@@ -200,12 +177,12 @@ void Flight::editFlight() {
 
 
 string Flight::selectTown(flight& f, string& tt) {
-	
+	city town;
 	do {
-		nnn = town.getCity();
-		nn.insert(nnn.begin(), nnn.end());
-		auto it = nn.find(tt);
-		if (it != nn.end()) {
+		inCity = town.getCity();
+		//nn.insert(nnn.begin(), nnn.end());
+		auto it = inCity.find(tt);
+		if (it != inCity.end()) {
 			return tt;
 		}
 		else {
@@ -215,7 +192,6 @@ string Flight::selectTown(flight& f, string& tt) {
 }
 
 void Flight::delFlight() {
-
 	string del_flight;
 	Flight::print();
 	getValue("select Flight what you want delete : ", del_flight);
@@ -223,7 +199,7 @@ void Flight::delFlight() {
 	OutToFile();
 }
 
-void Flight::print() {
+void Flight::print() {    
 	for (auto it = allFlight.begin(); it != allFlight.end(); ++it) {
 		cout << it->first << "\t" << (it->second).numFlight << endl << "\t" << (it->second).pointSrc
 			<< endl << "\t" << (it->second).pointDst << endl << "\t" << (it->second).dateFlight.day << " : " << (it->second).dateFlight.month << " : " << (it->second).dateFlight.year << endl << "\t" << (it->second).timeUp.hour << " : " << (it->second).timeUp.min << " : " << (it->second).timeUp.sec
@@ -263,7 +239,6 @@ void Flight::OutToFile() {
 void Flight::InToFlight() {
 	flight* f;
 	ifstream ft("..\\db\\flights.txt");
-
 	if (ft) {
 		while (!ft.eof()) {
 			f = new flight;
@@ -271,7 +246,6 @@ void Flight::InToFlight() {
 			string x;
 			ft >> x;
 			if (!x.empty()) {
-
 				ft >> f->numFlight;
 				ft >> f->pointSrc;
 				ft >> f->pointDst;
@@ -328,7 +302,7 @@ void Flight::listDownFlightF() {
 	}
 	system("pause");
 }
-void Flight::listUpDownFlighyF() {
+void Flight::listUpDownFlighyF() {    
 	string upCity, downCity;
 	auto it = allFlight.begin();
 	cout << "enter up city: ";
@@ -349,14 +323,11 @@ void Flight::listUpDownFlighyF() {
 void Flight::printTicketPersonF() {
 	Ticket tik;
 	tik.printTicketPerson();
-	
 }
 
 /*
-void Flight::printTicketPerson() {
+void Flight::printTicketPersonF() {
 	Ticket listPerson;
-	
-	
 	_tickets_ = listPerson.getTicketS();
 	string tempFlight;
 	getValue("enter numFlight : ", tempFlight);
@@ -366,8 +337,6 @@ void Flight::printTicketPerson() {
 			cout << it->first << "\t" << it->second.fio << " : " << it->second.birthday << endl;
 		else
 			cout << " Flight is default , this Flight nononononononon.... try again" << endl;
-
-
 	}
 }
 */
@@ -376,17 +345,13 @@ void Flight::getTicketOut() {
 	_tickets_ = listPerson.getTicketS();
 }
 */
-
 /*
-
 map<string, Flight::flight> Flight::get_flight() {
-	
 	return allFlight;
 }
 */
 /*
 multimap<string, passanger> Flight::get_ticket_my() {
-
 	return _tickets_;
 }
 */

@@ -1,4 +1,5 @@
 #pragma once
+//Potnin Igor-----------------------------------------------------
 #include "..\\classes\tickets.h"
 #include "..\\classes\flights.h"
 #include "..\\classes\user.h"
@@ -12,26 +13,19 @@
 using namespace std;
 
 class Ticket {
-			
 	struct passanger {
 		string fio;
 		string birthday;
-		
 	};
-	
-	
-		
 	multimap<string, passanger> _tickets;
-	
 public:
 	Ticket();
 	~Ticket();
-	
-		
-	void setTicketS(string& numFlight, string& fio, string& birthday);
-	void InToTicket();
-	void OutToTicket();
-	void booking(Ticket& tik);
-	void print();
-	void printTicketPerson();
+	//Potnin Igor ------------------------------------------------------------------------------
+	void setTicketS(string& numFlight, string& fio, string& birthday);  //Potnin Igor  --  Musukov Ruslan
+	void InToTicket();// Gubirov Azamat - Edlov Evgenii
+	void OutToTicket();// Gubirov Azamat - Edlov Evgenii
+	void booking(Ticket& tik);//Potnin Igor - Kardanova Radima
+	void print(); //Osmanov Alim
+	void printTicketPerson();  //Osmanov Alim
 } ;

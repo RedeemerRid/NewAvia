@@ -10,13 +10,10 @@ users::users() {
 	}
 	f.close();
 }
-
+//-------------------------------------------------------------------///
 users::~users() {
-	//saveuser_to_db(m_users);
 	void saveuser_to_db();
-	void savecity_to_db();
-	//void saveflight_to_db();
-	//void saveticket_to_db();
+    void savecity_to_db();
 }
 
 void users::adduser() {

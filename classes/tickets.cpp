@@ -8,7 +8,6 @@
 using namespace std;
 
 Ticket::Ticket() { InToTicket(); }
-
 Ticket::~Ticket() {  }
 
 void Ticket::setTicketS(string& numFlight, string& fio, string& birthday) {
@@ -18,8 +17,7 @@ void Ticket::setTicketS(string& numFlight, string& fio, string& birthday) {
 	_tickets.insert(make_pair(numFlight, pass));
 };
 
-void Ticket::print()
-{
+void Ticket::print(){
 	for (auto it = _tickets.begin(); it != _tickets.end(); ++it) {
 		cout << "#######################################################" << endl;
 		cout << it->first << endl;
@@ -30,7 +28,6 @@ void Ticket::print()
 }
 
 void Ticket::InToTicket() {
-
 	passanger* t;
 	ifstream ft("..\\db\\tickets.txt");
 	if (ft) {
@@ -67,8 +64,6 @@ void Ticket::OutToTicket() {
 }
 
 void Ticket::printTicketPerson() {
-	
-	
 	string tempFlight;
 	cout << "enter numFlight : ";
 	cin >> tempFlight;
@@ -78,16 +73,11 @@ void Ticket::printTicketPerson() {
 			cout << it->first << "\t" << it->second.fio << " : " << it->second.birthday << endl;
 		//else
 		//	cout << " Flight is default , this Flight nononononononon.... try again" << endl;
-
-
 	}
-	
 }
 
-void Ticket::booking(Ticket& tik)
-{
-	
-	string numFlight, fio, data_birthday;
+void Ticket::booking(Ticket& tik){
+    string numFlight, fio, data_birthday;
 	cout << "Enter number of flight: ";
 	cin >> numFlight;
 	cout << "Enter fio: ";
