@@ -1,4 +1,5 @@
 #pragma once
+//  ---   Ulbashev Aslan -------------------------------------
 #include <map>
 #include <set>
 #include <iostream>
@@ -11,12 +12,13 @@ class city {
 	string file_name = "..\\db\\cities.txt";
 public:
 	city();
-	void addCity();  //Potnin Igor
-	void editCity();   //Potnin Igor
-	void delCity();  //Edlov Evgenii
+	//  ---   Ulbashev Aslan -------------------------------------
+	void addCity();  //Ulbashev Aslan - Edlov Evgenii
+	void editCity();   //Ulbashev Aslan - Kardanova Radima
+	void delCity();  //Edlov Evgenii 
 	void save();//Edlov Evgenii
 	
-	void inToFileC();   //Potnin Igor
-	set<string> getCity(); //Edlov Evgenii -- Musukov Ruslan
+	void inToFileC();   //Ulbashev Aslan
+	set<string> getCity(); //Edlov Evgenii
 	~city();
 };

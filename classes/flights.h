@@ -32,8 +32,7 @@ class Flight {
 		double costTicket;
 		int countSeats;
 	};
-	//city town;
-	//set<string> nnn;
+	
 	set<string> inCity;
 	map<string, flight> allFlight;
 public:
@@ -46,10 +45,10 @@ public:
 	void OutToFile();  // Gubirov Azamat -- Musukov Ruslan
 	void print();    //Sokurova Madina
 	string selectTown(flight& f, string& tt);   // Potnin Igor -- Musukov Ruslan
-	void InToFlight(); // Gubirov Azamat -- Sokurova Madina
+	void InToFlight(); // Musukob Ruslan -- Sokurova Madina
 	void  printTicketPersonF();    // Musukov Ruslan
-	void listUpFlightF(); //Potnin Igor - Osmanov Alim
-	void listDownFlightF();//Potnin Igor - Osmanov Alim
-	void listUpDownFlighyF();//Potnin Igor - Osmanov Alim
+	void listUpFlightF(); //Potnin Igor - Sokurova Madina 
+	void listDownFlightF();//Potnin Igor - Gubirov Azamat
+	void listUpDownFlighyF();//Potnin Igor - Musukov Ruslan 
 } ;
 

@@ -57,15 +57,15 @@ void Flight::addFlight() {
 			f.pointSrc = selectTown(f, tempTown);
 			getValue("enter Point of Distination : ", tempTown);
 			f.pointDst = selectTown(f, tempTown);
-			getValue("enter Date of Flightn : ", f.dateFlight.day);
-			getValue("enter Date of Flightn : ", f.dateFlight.month);
-			getValue("enter Date of Flightn : ", f.dateFlight.year);
-			getValue("enter Time of Up : ", f.timeUp.hour);
-			getValue("enter Time of Up : ", f.timeUp.min);
-			getValue("enter Time of Up : ", f.timeUp.sec);
-			getValue("enter Time of Down : ", f.timeDown.hour);
-			getValue("enter Time of Down : ", f.timeDown.min);
-			getValue("enter Time of Down : ", f.timeDown.sec);
+			getValue("enter DAY of Flightn : ", f.dateFlight.day);
+			getValue("enter MONTH of Flightn : ", f.dateFlight.month);
+			getValue("enter YEAR of Flightn : ", f.dateFlight.year);
+			getValue("enter HOUR of Up : ", f.timeUp.hour);
+			getValue("enter MINUTE of Up : ", f.timeUp.min);
+			getValue("enter SEC of Up : ", f.timeUp.sec);
+			getValue("enter HOUR of Down : ", f.timeDown.hour);
+			getValue("enter MINUTE of Down : ", f.timeDown.min);
+			getValue("enter SEC of Down : ", f.timeDown.sec);
 			getValue("enter Type of Airplane : ", f.typeAirplane);
 			getValue("enter Cost of Ticket : ", f.costTicket);
 			getValue("enter Count of Seats : ", f.countSeats);
@@ -81,7 +81,7 @@ void Flight::editFlight() {
 		cout << endl;
 		flight f1;
 		string edit_flight, exit, button, tempTown;
-		getValue("if you changed your mind, if you don't want to change anything, enter yes, or -0-, press wont yo mind, \nif you go go go exit 'enter' : ", exit);
+		getValue("if you changed your mind, if you don't want to change anything, enter Y or 0 or press wont you want, \n if you CHANGE this exit 'enter' : ", exit);
 		if (!exit.empty())
 			cout << "by by" << endl;
 		else {

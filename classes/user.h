@@ -12,10 +12,10 @@ class users {
 	const string m_filename = "..\\db\\users.txt";
 public:
 	users();       //Ulbashev Aslan  -------------------//  
-	void adduser();  //Ulbashev Aslan
-	void deluser();  //Kardanova Radima
-	void edituser(); //Ulbashev Aslan
-	void viewuser();  //Kardanova Radima
+	void adduser();  //Ulbashev Aslan - Edlov Evgenii
+	void deluser();  //Kardanova Radima - Ulbashev Aslan
+	void edituser(); //Ulbashev Aslan - Edlov Evgenii
+	void viewuser();  //Kardanova Radima - Edlov Evgenii
 	void saveuser_to_db(map <string, string>); //Ulbashev Aslan
 	~users();
 };

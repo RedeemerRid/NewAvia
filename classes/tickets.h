@@ -22,10 +22,10 @@ public:
 	Ticket();
 	~Ticket();
 	//Potnin Igor ------------------------------------------------------------------------------
-	void setTicketS(string& numFlight, string& fio, string& birthday);  //Potnin Igor  --  Musukov Ruslan
-	void InToTicket();// Gubirov Azamat - Edlov Evgenii
-	void OutToTicket();// Gubirov Azamat - Edlov Evgenii
-	void booking(Ticket& tik);//Potnin Igor - Kardanova Radima
+	void setTicketS(string& numFlight, string& fio, string& birthday);  //Potnin Igor
+	void InToTicket();// Osmanov Alim - Potnin Igor
+	void OutToTicket();// Osmanov Alim - Potnin Igor
+	void booking(Ticket& tik);//Potnin Igor - Osmanov Alim
 	void print(); //Osmanov Alim
-	void printTicketPerson();  //Osmanov Alim
+	void printTicketPerson();  //Osmanov Alim - Potnin Igor
 } ;
