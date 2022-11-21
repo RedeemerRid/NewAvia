@@ -1,4 +1,6 @@
 
+
+//-------------Musukov Ruslan , Gubirov Azamat, Sokurova Madina
 #include <iostream>
 #include <string>
 #include <map>
@@ -26,7 +28,7 @@ void getValue<string>(string prompt, string& value);
 void main_menu() {
 
 	Flight ff;
-	//Ticket listPerson;
+	//Ticket ticket;
 	
 	
 
@@ -68,7 +70,17 @@ void main_menu() {
 			ff.delFlight();
 			break;
 		case 4:
+
 			ff.printTicketPersonF();
+			//multimap<string, passanger> pass;
+			//auto itik = ticket.gettickets();
+			//copy(itik.begin(), itik.end(), inserter(pass, pass.end()));
+			//for (auto it = pass.begin(); it != pass.end(); ++it)
+				//cout << it->first << "\t" << it->second.fio << endl;
+
+			//
+			// for (auto it = itik.begin(); it != itik.end(); ++it)
+				//cout << it->first << "\t" << it->second.fio << endl;
 			system("pause");
 			//cout << "ups";
 			break;
@@ -144,3 +156,5 @@ void printTicketPerson() {
 	}
 }
 */
+
+//-------------Musukov Ruslan , Gubirov Azamat, Sokurova Madina

@@ -12,6 +12,8 @@
 #include <set>
 using namespace std;
 
+
+
 class Ticket {
 	struct passanger {
 		string fio;
@@ -28,4 +30,5 @@ public:
 	void booking(Ticket& tik);//Potnin Igor - Osmanov Alim
 	void print(); //Osmanov Alim
 	void printTicketPerson();  //Osmanov Alim - Potnin Igor
+	//multimap<string, passanger> gettickets() { return _tickets; };
 } ;

@@ -35,6 +35,7 @@ class Flight {
 	
 	set<string> inCity;
 	map<string, flight> allFlight;
+	
 public:
 	Flight();	
     ~Flight();

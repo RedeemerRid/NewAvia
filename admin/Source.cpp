@@ -1,3 +1,5 @@
+// Ulbashev Aslan, Edlov Evgenii, Rardanova Radima--------------
+
 #include <iostream>
 #include <string>
 #include "..\\classes\user.h"
@@ -114,3 +116,6 @@ int main() {
 
 	return 0;
 }
+
+
+// Ulbashev Aslan, Edlov Evgenii, Rardanova Radima ------

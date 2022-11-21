@@ -1,3 +1,5 @@
+// Ulbashev Aslan ,  Musukov Ruslan
+
 #include <iostream>
 
 using namespace std;
@@ -17,7 +19,7 @@ int main() {
 			system("cls");
 			cin.ignore();
 			cout << "select  0  -  exit : " << endl;
-			cout << "Select Who are you ----  select -1 -2 -3 :" << endl;
+			cout << "Select Who are you ----  select \n -1 - Admin \n -2 - Operator \n -3 - Users \n  select : ";
 		}
 		cin >> press;
 		switch (press) {

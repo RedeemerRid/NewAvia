@@ -12,3 +12,5 @@ asd
 asdlog3 333
 qwe 333
 qwe 333
+log1 log1
+log1 log1

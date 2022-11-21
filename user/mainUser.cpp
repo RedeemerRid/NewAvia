@@ -1,3 +1,6 @@
+
+// Potnin Igor, Osmanov Alim ------
+
 #include "..\\classes\flights.h"
 #include "..\\classes\tickets.h"
 #include "..\\classes\cities.h"
@@ -129,3 +132,4 @@ void booking()
 }
 
 */
+/////// Potnin Igor, Osmanov Alim ------
